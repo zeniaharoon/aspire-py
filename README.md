@@ -8,4 +8,4 @@ code before (conditonals and loops), and have a willingness to learn.
 
 ## How to use
 Located in this repository, you will see directories (folders) titled `ProjN` which contain the lessons of each major topic. To begin working on a project, navigate to the directory. Each one will have its own README.md (which is what you are reading right now) that will detail the lesson goals of the project and
-how to solve it. Good luck!
+how to solve it. Start with `Proj0`. Good luck and always ask questions!
