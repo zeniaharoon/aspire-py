@@ -125,18 +125,10 @@ def dictionary_basics(d, key, value):
 # =================================================================================================
 # DO NOT EDIT ANY CODE BELOW THIS LINE: Would be cheating...
 # =================================================================================================
-def check_input():
-    while True:
-        x = input("Be honest...[Yes/No]")
-        if x.lower() == "yes": return True
-        elif x.lower() == "no": return False
-        else: print("Enter Yes or No")
-
-import rsa
-import time
-if __name__=="__main__":
     """
-    DO NOT EDIT THE TEST CODE
+    ===============================================
+    STOP HERE! DO NOT EDIT ANY CODE BELOW THE T-REX
+    ===============================================
                               _.-.
                              /  99\
                             (      `\
@@ -156,6 +148,16 @@ if __name__=="__main__":
                       "  "
 
     """
+def check_input():
+    while True:
+        x = input("Be honest...[Yes/No]")
+        if x.lower() == "yes": return True
+        elif x.lower() == "no": return False
+        else: print("Enter Yes or No")
+
+import rsa
+import time
+if __name__=="__main__":
     fun = 33
     fun1 = [-32, -30, -28, -26, -24, -22, -20, -18, -16, -14, -12, -10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32]
     even = 1029428
