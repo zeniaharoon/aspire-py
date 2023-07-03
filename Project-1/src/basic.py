@@ -1,6 +1,9 @@
 #TODO: Add your header here!
+Author: Zenia Haroon
 
+Date: 7/3/23
 
+Description: This file has short functions in python
 
 def add_two (x):
     """
@@ -13,6 +16,11 @@ def add_two (x):
     #TODO: Add functionality here
     pass # Dont know what this is? look it up or ask brian
 
+    number = x + 2
+    
+    return number
+    
+
 def is_even(x):
     """
     This function should return true if the number is even, else False
@@ -21,6 +29,13 @@ def is_even(x):
     #TODO: Add functionality here
     pass
 
+    if x % 2 == 0:
+	number = True
+    else:
+	number = False
+
+    return number
+
 def is_odd(x):
     """
     This function should return true if the number is odd, else False
@@ -28,6 +43,14 @@ def is_odd(x):
 
     #TODO: Add functionality here
     pass
+
+    if x % 2 == 1:
+	number = True
+    else:
+	number = False
+
+    return number
+	
 
 def for_fun(x):
     """
