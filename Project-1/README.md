@@ -41,3 +41,9 @@ We learned a lot in project-0, lets refresh some of those concepts and review ba
     - When you are done, run the program from the terminal
         - ***MAKE SURE YOU RUN FROM `Project-1`***
     - If you completed all tests successfully, a secret message should print out. Copy it and add code in `results.py` that print it out
+
+## Goals
+After completing this project, you should be able to have the following skills:
+- Understand what `fetch`, `merge` and `pull` do, and why they are necessary
+- Basic understanding of modules, packages, and python package managers
+- Get a good refresh on basic python programming techniques
