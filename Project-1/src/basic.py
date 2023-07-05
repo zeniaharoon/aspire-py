@@ -1,9 +1,11 @@
 #TODO: Add your header here!
+'''
 Author: Zenia Haroon
 
-Date: 7/3/23
+Date: 7/4/23
 
 Description: This file has short functions in python
+'''
 
 def add_two (x):
     """
@@ -14,10 +16,10 @@ def add_two (x):
     """
 
     #TODO: Add functionality here
-    pass # Dont know what this is? look it up or ask brian
+    # Dont know what this is? look it up or ask brian
 
     number = x + 2
-    
+
     return number
     
 
@@ -27,12 +29,11 @@ def is_even(x):
     """
 
     #TODO: Add functionality here
-    pass
 
     if x % 2 == 0:
-	number = True
+        number = True
     else:
-	number = False
+        number = False
 
     return number
 
@@ -42,16 +43,14 @@ def is_odd(x):
     """
 
     #TODO: Add functionality here
-    pass
 
     if x % 2 == 1:
-	number = True
+        number = True
     else:
-	number = False
+        number = False
 
     return number
 	
-
 def for_fun(x):
     """
     This function should take any arbitrary number x,
@@ -59,7 +58,14 @@ def for_fun(x):
     """
 
     #TODO: Add functionality here
-    pass
+
+    numbers = []
+    
+    for i in range (-x,x):
+        if is_even(i):
+            numbers.append(i)
+
+    return numbers
 
 def is_prime(x):
     """
@@ -69,7 +75,12 @@ def is_prime(x):
     """
 
     #TODO: Add functionality here
-    pass
+
+    if x % 2 != 0:
+        if x % 3 != 0:
+            return True
+    else:
+        return False
 
 def is_prime_robust(x):
     """
@@ -79,8 +90,18 @@ def is_prime_robust(x):
     """
 
     #TODO: Add functionality here
-    pass
 
+    if x == str(x):
+        return False
+    elif (x == True) or (x == False):
+        return False
+    elif x == int(x): 
+        if x % 2 != 0:
+            if x % 3 != 0:
+                return True 
+    else:
+        return False
+    
 def n_fibonacci(n):
     """
     This function should return a list of the first n fibonacci numbers
@@ -93,9 +114,22 @@ def n_fibonacci(n):
 
     Make sure inputs are robust, return False for bad inputs
     """
-
+    
     #TODO: Add functionality here
-    pass
+
+    num = [0,1]
+    if n == str(n):
+        return False
+    elif (n == True) or (n == False):
+        return False
+    elif n == int(n):
+        for i in range(n-2):
+            temp = num[i] + num [i+1]
+            num.append(temp)
+        #print(num)
+        return num
+    else:
+        return False
 
 def make_tree():
     """
@@ -112,8 +146,11 @@ def make_tree():
     """
 
     #TODO: Add functionality here
-    pass
-
+    width = 1
+    for i in range(1,6): 
+        print(" " * (5-i) + ("+"* width))
+        width += 2
+    
 def make_tree_inverted():
     """
     This function should print the following tree using only for loops and prints
@@ -128,7 +165,10 @@ def make_tree_inverted():
     """
 
     #TODO: Add functionality here
-    pass
+    width = 9
+    for i in range(1,6):
+        print(" " * (i-1) + ("+"* width))
+        width = width - 2
 
 def dictionary_basics(d, key, value):
     """
@@ -141,7 +181,23 @@ def dictionary_basics(d, key, value):
     """
 
     #TODO: Add functionality here
-    pass
+    
+    temp = []
+    for i in d.keys():
+        if "red" in i:
+            temp.append(d[i])
+            temp.sort()
+
+    val = d[key]
+
+    ke = 0
+    for i in d.keys():
+        if str(d[i]) == value:
+            ke = i  
+
+    tupl = (temp, val, ke)
+    print(tupl)
+    return tupl    
 
 
 
