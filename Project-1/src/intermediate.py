@@ -41,6 +41,16 @@ def uh_oh(integer, float, string, boolean, list, dictionary):
     - Key errors return "eggplant"
     """
 
+    fail1 = integer + string
+
+    fail2 = float / boolean
+
+    fail3 = dictionary["I do not exist"]
+
+    fail4 = list[3]
+
+    fail5 = list.aye_im_walkin_ere()
+
     #TODO: Add functionality here
 
 class Avenger:
