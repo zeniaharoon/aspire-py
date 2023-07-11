@@ -51,7 +51,7 @@ def uh_oh(integer, float, string, boolean, list, dictionary):
     - Key errors return "eggplant"
     """
     #TODO: Add functionality here
-    
+    '''    
     try:
         fail1 = integer + string
     except:
@@ -76,8 +76,27 @@ def uh_oh(integer, float, string, boolean, list, dictionary):
         fail5 = list.aye_im_walking_ere()
     except:
         return "eggplant"
+    '''
+
+    try:
+        fail1 = integer + string
+        fail2 = float/boolean
+        fail3 = dictionary["I do not exist"]
+        fail4 = list[3]
+        fail5 = list.aye_im_walking_ere()
+    except TypeError:
+        return "apple"
+    except ZeroDivisionError:
+        return "banana"
+    except KeyError:
+        return "corn"
+    except IndexError:
+        return "donut"
+    except AttributeError:
+        return "eggplant"
 
 
+  
 class Avenger:
     """
     This is a class, we use this to group data together into structures that make semantic sense
