@@ -46,4 +46,15 @@ We learned a lot in project-0, lets refresh some of those concepts and review ba
 After completing this project, you should be able to have the following skills:
 - Understand what `fetch`, `merge` and `pull` do, and why they are necessary
 - Basic understanding of modules, packages, and python package managers
-- Get a good refresh on basic python programming techniques
+- Get a good refresh on basic, intermediate, and advanced python programming techniques
+    - variables
+    - loops
+    - conditionals
+    - operators
+    - Try-Catch
+    - Classes and methods
+    - Instantiation
+    - Inheritance
+    - Interfaces
+    - Overriding
+    - Basic Programming Patterns
