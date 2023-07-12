@@ -22,13 +22,10 @@ Make sure of these things:
 Additionally, lets have a special field just for T'Challa:
 - vibranium: (boolean)    initialized to True
 """
-class Avenger:
-    def __init__(self, name):
-        self.name = name
 
-class BlackPanther(Avenger):
-    super().__init__("hi")
+#TODO: Add functionality here
 
+    #TODO: Add functionality here
     """
     TEST 2
 
@@ -45,6 +42,7 @@ class BlackPanther(Avenger):
     NOTE: This is an example of an **override**
     """
 
+    #TODO: Add functionality here
     """
     TEST 3
     
@@ -68,6 +66,64 @@ class BlackPanther(Avenger):
       50% of the damage that T'Challa was dealt. We can use this information to 
       deal damage back to the attacker, thus simulating the kinetic properties of his suit
     """
+
+#TODO: Add functionality here
+"""
+TEST 4-5
+    
+Now that you have gotten the hang of creating sub-classes,
+lets create a few more Avengers.
+
+Below create an IronMan and Hulk class that follow the specification
+
+IronMan:
+- Should inherit from Avenger (follow practices from BlackPanther)
+- Has an extra field
+    - fuel: (int) In between 0 and 100, initialized to 100
+- special_power
+    - Checks if fuel greater than 70
+    - If it is, should deplete fuel by 70, and return a random float between 40-60 for damage
+    - If fuel less than 70, return -1
+    
+    
+Hulk:
+- Should inherit from Avenger (follow practices from BlackPanther)
+- Has an extra field
+    - hulked_out: (bool) default to True
+- special_power
+    - Checks hulked_out is True
+    - If it is, should set hulked_out to False and return string "HULK SMASH"
+    - If hulked_out False, set to True and return the string "I'm always angry"
+"""
+
+"""
+TEST 6
+
+Now that we have created a few classes in our ecosystem,
+lets learn about class attributes that don't change and 
+are persistant for every class instantiated
+
+Sometimes we want to embed some metadata about our classes
+that are independent to each individual instance. In that case
+we can implement a class attribute.
+
+For the Avenger class, implement a class attribute called
+`_total_avengers`. It should increment by one every time a new avenger
+is instantiated.
+NOTE: Notice how we prefix this variable with an underscore, this is python's
+attempt at private variables that we don't want everyone to see
+
+In addition: Create two helper methods along with this attribute in the Avenger class
+These are common methods used in Object Oriented Programming called "getters" and "setters"
+
+get_total_avengers(): return the total number of avengers
+set_total_avengers(x): take one argument and set the total number of avengers to that
+reset_total_avengers(): reset the total number of avengers to 0
+
+NOTE: The getter and setter methods here should be **class methods**
+You will need to use the `@classmethod` decorator to denote that, and ensure
+that the first argument is `cls` not `self`!
+"""
 
 # =================================================================================================
 # DO NOT EDIT ANY CODE BELOW THIS LINE: Would be cheating...
@@ -131,6 +187,49 @@ def test3():
     except:
         return False
 
+def test4():
+    try:
+        iron_man = IronMan("Iron Man", "Tony Stark", 50, .33, 1)
+        assert issubclass(iron_man, Avenger)
+        assert iron_man.fuel == 100
+        damage = iron_man.special_power()
+        assert iron_man.fuel == 30
+        assert damage >= 40 and damage <= 60
+        damage = iron_man.special_power()
+        assert damage == -1
+    except:
+        return False
+
+def test5():
+    try:
+        hulk = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
+        assert issubclass(hulk, Avenger)
+        assert hulk.hulked_out
+        quote = hulk.special_power()
+        assert quote == "HULK SMASH"
+        assert not hulk.hulked_out
+        quote = hulk.special_power()
+        assert quote == "I'm always angry"
+        assert hulk.hulked_out
+    except:
+        return False
+
+def test6():
+    try:
+        hulk = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
+        hulk.reset_total_avengers()
+        assert hulk.get_total_avengers() == 3
+        bp = BlackPanther("Black Panther", "T'Challa", 80.5, .75, 1, level=2)
+        hulk2 = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
+        iron_man = IronMan("Iron Man", "Tony Stark", 50, .33, 1)
+        assert iron_man.get_total_avengers() == 3
+        assert bp.get_total_avengers() == 3
+        assert hulk2.get_total_avengers() == 3
+        hulk.set_total_avengers(6)
+        assert iron_man.get_total_avengers() == 6
+    except:
+        return False
+
 import rsa
 import time
 if __name__=="__main__":
@@ -138,11 +237,17 @@ if __name__=="__main__":
     assert test1(), "❌❌❌ Test 1 Failed..."
     print("🍎🍎🍎 Test 1 Passed!")
     time.sleep(0.5)
-    assert test2(), "❌❌❌ Test 1 Failed..."
-    print("🍎🍎🍎 Test 1 Passed!")
+    assert test2(), "❌❌❌ Test 2 Failed..."
+    print("🍎🍎🍎 Test 2 Passed!")
     time.sleep(0.5)
-    assert test3(), "❌❌❌ Test 1 Failed..."
-    print("🍎🍎🍎 Test 1 Passed!")
+    assert test3(), "❌❌❌ Test 3 Failed..."
+    print("🍎🍎🍎 Test 3 Passed!")
+    time.sleep(0.5)
+    assert test4(), "❌❌❌ Test 4 Failed..."
+    print("🍎🍎🍎 Test 4 Passed!")
+    time.sleep(0.5)
+    assert test5(), "❌❌❌ Test 5 Failed..."
+    print("🍎🍎🍎 Test 5 Passed!")
     time.sleep(0.5)
 
     print("Congrats!!! You have unlocked the secret code")
