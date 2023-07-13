@@ -125,6 +125,22 @@ You will need to use the `@classmethod` decorator to denote that, and ensure
 that the first argument is `cls` not `self`!
 """
 
+"""
+TEST 7
+
+Above we learned about class methods, but now lets learn about static methods.
+As the name implies, static methods do not alter or change anything about the 
+**state** of an object. They are purely meant to perform some action 
+
+You can define a static method by using a decorator as we did with class methods
+@staticmethod
+
+Define a static method called "foo" in the Avengers class that simply returns the string "Avenger"
+Should be trivially easy but the idea here is that its not something that has access to 
+any state of a class
+"""
+
+
 # =================================================================================================
 # DO NOT EDIT ANY CODE BELOW THIS LINE: Would be cheating...
 # =================================================================================================
@@ -230,6 +246,17 @@ def test6():
     except:
         return False
 
+def test7():
+    try:
+        hulk = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
+        bp = BlackPanther("Black Panther", "T'Challa", 80.5, .75, 1, level=2)
+        iron_man = IronMan("Iron Man", "Tony Stark", 50, .33, 1)
+        assert hulk.foo() == "Avenger"
+        assert bp.foo() == "Avenger"
+        assert iron_man.foo() == "Avenger"
+    except:
+        return False
+
 import rsa
 import time
 if __name__=="__main__":
@@ -248,6 +275,12 @@ if __name__=="__main__":
     time.sleep(0.5)
     assert test5(), "❌❌❌ Test 5 Failed..."
     print("🍎🍎🍎 Test 5 Passed!")
+    time.sleep(0.5)
+    assert test6(), "❌❌❌ Test 6 Failed..."
+    print("🍎🍎🍎 Test 6 Passed!")
+    time.sleep(0.5)
+    assert test7(), "❌❌❌ Test 7 Failed..."
+    print("🍎🍎🍎 Test 7 Passed!")
     time.sleep(0.5)
 
     print("Congrats!!! You have unlocked the secret code")

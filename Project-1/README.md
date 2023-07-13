@@ -60,4 +60,3 @@ After completing this project, you should be able to have the following skills:
     - Decorators
     - attributes
     - static and class methods
-    - Basic Programming Patterns
