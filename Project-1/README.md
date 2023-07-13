@@ -12,7 +12,7 @@ Python Programming Refresher and a little more (packages)
 ```
 
 ## Assignment
-We learned a lot in project-0, lets refresh some of those concepts and review basic python programming. Here's how to complete this project:
+We learned a lot in project-0, lets refresh some of those concepts and review basic and advanced python programming. Here's how to complete this project:
 ### Review
 - ✅ `merge`/Sync your forked repo with main (if there are changes)
 - ✅ Using `git`, go `fetch` updates on your terminal to view changes. If there are changes, `pull` them down
@@ -36,7 +36,7 @@ We learned a lot in project-0, lets refresh some of those concepts and review ba
     - HINT: use the `-r` flag
 - ✅ Retry running `external.py` to verify that your packages installed correctly
 ### Coding Exercises
-- ✅ Complete `basic.py` located in the `aspire-py/Project-1/src/` directory
+- ✅ Complete `basic.py`, `intermediate.py`, and `advanced.py` located in the `aspire-py/Project-1/src/` directory
     - You should see sections of code that have a `TODO:` comment. Only write and modify code specified by these TODOs
     - When you are done, run the program from the terminal
         - ***MAKE SURE YOU RUN FROM `Project-1`***
@@ -46,4 +46,17 @@ We learned a lot in project-0, lets refresh some of those concepts and review ba
 After completing this project, you should be able to have the following skills:
 - Understand what `fetch`, `merge` and `pull` do, and why they are necessary
 - Basic understanding of modules, packages, and python package managers
-- Get a good refresh on basic python programming techniques
+- Get a good refresh on basic, intermediate, and advanced python programming techniques
+    - variables
+    - loops
+    - conditionals
+    - operators
+    - Try-Catch
+    - Classes and methods
+    - Instantiation
+    - Inheritance
+    - Interfaces
+    - Overriding
+    - Decorators
+    - attributes
+    - static and class methods

@@ -43,12 +43,13 @@ def uh_oh(integer, float, string, boolean, list, dictionary):
     I have implemented some code below that you are not to modify.
 
     Create a try-except block around that code to handle the errors that will arise.
+    ENSURE YOU ONLY HAVE ONE TRY BLOCK
 
     - When i try adding mismatched types, return the string "apple"
     - Division by zero returns "banana"
-    - Attribute errors return "corn"
+    - Attribute errors return "eggplant"
     - Index out of range returns "donut"
-    - Key errors return "eggplant"
+    - Key errors return "corn"
     """
     #TODO: Add functionality here
     '''    
