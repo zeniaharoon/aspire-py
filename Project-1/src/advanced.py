@@ -190,6 +190,7 @@ def test2():
         assert bp.health == 80.5-10
         assert bp.power == .99
         assert bp.agility == .99
+        return True
     except:
         return False
 
@@ -200,6 +201,7 @@ def test3():
         assert bp.health == 80.5 - 25
         assert not dead
         assert recoil == (25 / 2)
+        return True
     except:
         return False
 
@@ -213,6 +215,7 @@ def test4():
         assert damage >= 40 and damage <= 60
         damage = iron_man.special_power()
         assert damage == -1
+        return True
     except:
         return False
 
@@ -227,6 +230,7 @@ def test5():
         quote = hulk.special_power()
         assert quote == "I'm always angry"
         assert hulk.hulked_out
+        return True
     except:
         return False
 
@@ -243,6 +247,7 @@ def test6():
         assert hulk2.get_total_avengers() == 3
         hulk.set_total_avengers(6)
         assert iron_man.get_total_avengers() == 6
+        return True
     except:
         return False
 
@@ -254,6 +259,7 @@ def test7():
         assert hulk.foo() == "Avenger"
         assert bp.foo() == "Avenger"
         assert iron_man.foo() == "Avenger"
+        return True
     except:
         return False
 
