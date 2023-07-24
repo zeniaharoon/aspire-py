@@ -190,36 +190,39 @@ def test2():
         assert bp.health == 80.5-10
         assert bp.power == .99
         assert bp.agility == .99
+        return True
     except:
         return False
 
 def test3():
     try:
-        bp = BlackPanther("Black Panther", "T'Challa", 80.5, .75, 1, level=2)
+        bp = BlackPanther("Black Panther", "T'Challa", 80.5, .75, 0, level=2)
         dead, recoil = bp.attacked(25)
         assert bp.health == 80.5 - 25
         assert not dead
         assert recoil == (25 / 2)
+        return True
     except:
         return False
 
 def test4():
     try:
         iron_man = IronMan("Iron Man", "Tony Stark", 50, .33, 1)
-        assert issubclass(iron_man, Avenger)
+        assert issubclass(IronMan, Avenger)
         assert iron_man.fuel == 100
         damage = iron_man.special_power()
         assert iron_man.fuel == 30
         assert damage >= 40 and damage <= 60
         damage = iron_man.special_power()
         assert damage == -1
+        return True
     except:
         return False
 
 def test5():
     try:
         hulk = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
-        assert issubclass(hulk, Avenger)
+        assert issubclass(Hulk, Avenger)
         assert hulk.hulked_out
         quote = hulk.special_power()
         assert quote == "HULK SMASH"
@@ -227,6 +230,7 @@ def test5():
         quote = hulk.special_power()
         assert quote == "I'm always angry"
         assert hulk.hulked_out
+        return True
     except:
         return False
 
@@ -234,7 +238,7 @@ def test6():
     try:
         hulk = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
         hulk.reset_total_avengers()
-        assert hulk.get_total_avengers() == 3
+        assert hulk.get_total_avengers() == 0
         bp = BlackPanther("Black Panther", "T'Challa", 80.5, .75, 1, level=2)
         hulk2 = Hulk("Hulk", "Bruce Banner", 250, .33, 1)
         iron_man = IronMan("Iron Man", "Tony Stark", 50, .33, 1)
@@ -243,6 +247,7 @@ def test6():
         assert hulk2.get_total_avengers() == 3
         hulk.set_total_avengers(6)
         assert iron_man.get_total_avengers() == 6
+        return True
     except:
         return False
 
@@ -254,6 +259,7 @@ def test7():
         assert hulk.foo() == "Avenger"
         assert bp.foo() == "Avenger"
         assert iron_man.foo() == "Avenger"
+        return True
     except:
         return False
 
