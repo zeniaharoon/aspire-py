@@ -138,7 +138,7 @@ class Avenger:
     Returns:
     None
     """
-
+     
 
     #TODO: Add functionality here
  
@@ -149,7 +149,9 @@ class Avenger:
         self.power = float(max(0, min(1, power)))
         self.agility = float(max(0, min(1, agility)))
         self.level = int(max(0, level))
-        self.exp = 0 
+        self.exp = 0  
+        Avenger._total_avengers += 1
+
 
 # =================================================================================================
     # Tests 2-5
@@ -257,6 +259,27 @@ class Avenger:
     """ 
     def special_power(self):
         raise NotImplementedError
+    
+
+    #Test 6/7 in advanced.py
+    _total_avengers = 0
+
+    @classmethod
+    def get_total_avengers(cls):
+        return Avenger._total_avengers
+    
+    @classmethod
+    def set_total_avengers(cls, x):
+        Avenger._total_avengers = x
+
+    @classmethod
+    def reset_total_avengers(cls):
+        Avenger._total_avengers = 0
+
+    @staticmethod
+    def foo():
+        return "Avenger"
+
 
 # =================================================================================================
 # DO NOT EDIT ANY CODE BELOW THIS LINE: Would be cheating...
